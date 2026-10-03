@@ -1,0 +1,24 @@
+{
+  "slug": "openapi-compatibility-reviewer",
+  "title": "OpenAPI Compatibility Reviewer",
+  "category": "developer-tools",
+  "description": "Check API contract changes against compatibility review and migration evidence.",
+  "fields": {
+    "changed_operations": {
+      "label": "changed operations",
+      "kind": "list",
+      "minimum": 1
+    },
+    "compatibility_classification": {
+      "label": "compatibility classification",
+      "kind": "required",
+      "minimum": 0
+    },
+    "consumer_migration_plan": {
+      "label": "consumer migration plan",
+      "kind": "text",
+      "minimum": 40
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

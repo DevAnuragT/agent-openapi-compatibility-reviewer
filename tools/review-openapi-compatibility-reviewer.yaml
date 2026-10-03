@@ -1,0 +1,54 @@
+{
+  "name": "review-openapi-compatibility-reviewer",
+  "description": "Run OpenAPI Compatibility Reviewer",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "changed_operations": {
+            "type": "array",
+            "description": "changed operations"
+          },
+          "compatibility_classification": {
+            "type": "string",
+            "description": "compatibility classification"
+          },
+          "consumer_migration_plan": {
+            "type": "string",
+            "description": "consumer migration plan"
+          }
+        },
+        "required": [
+          "changed_operations",
+          "compatibility_classification",
+          "consumer_migration_plan"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-openapi-compatibility-reviewer.py",
+    "runtime": "python3"
+  }
+}

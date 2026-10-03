@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: openapi-compatibility-reviewer
+version: 0.1.0
+description: Check API contract changes against compatibility review and migration evidence.
+skills:
+  - openapi-compatibility-reviewer-skill
+tools:
+  - review-openapi-compatibility-reviewer
+tags:
+  - developer-tools
+  - evidence-driven
